@@ -26,6 +26,7 @@ find_package(Qt6 COMPONENTS Gui Quick REQUIRED)
 # ========= Add executable
 qt_add_executable(${CMAKE_PROJECT_NAME}
     ${SOURCES}
+
 )
 
 # ========= Add qml medule
