@@ -10,7 +10,6 @@
 class AItemTimer : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QTimer *timeLapse READ timelapse NOTIFY timeLapseChanged)
     Q_PROPERTY(QString elapsedTime READ elapsedTime NOTIFY elapsedTimeChanged) // Add this line
     QML_ELEMENT
 public:
@@ -32,7 +31,7 @@ private slots:
 
 private:
     QTimer *m_timelapse;
-    QElapsedTimer m_elapsedTimer;
+    int m_elapsedTime;
 };
 
 #endif // AITEMTIMER_H

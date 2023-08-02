@@ -1,8 +1,9 @@
 #include "aitemtimer.h"
 
-AItemTimer::AItemTimer(QObject *parent) : QObject{parent}
+AItemTimer::AItemTimer(QObject *parent) : QObject{parent}, m_elapsedTime(0)
 {
     m_timelapse = new QTimer{this};
+    m_timelapse->setInterval(1000);
     connect(m_timelapse, &QTimer::timeout, this, &AItemTimer::onTimerTimeout);
 }
 
@@ -13,27 +14,24 @@ QTimer *AItemTimer::timelapse() const
 
 QString AItemTimer::elapsedTime() const
 {
-    qDebug() << "Elapsed time: " << m_elapsedTimer.elapsed() / 1000 << " seconds";
-    return QString::number(m_elapsedTimer.elapsed() / 1000); // Convert milliseconds to seconds as QString
+    return QString::number(m_elapsedTime);
 }
 
 void AItemTimer::start()
 {
     qDebug() << "Timer Started";
     m_timelapse->start();
-    m_elapsedTimer.start(); // Start the elapsed timer
 }
 
 void AItemTimer::stop()
 {
     m_timelapse->stop();
-    m_elapsedTimer.invalidate(); // Invalidate the elapsed timer
 }
 
 void AItemTimer::onTimerTimeout()
 {
     qDebug() << "on Timer Timeout";
+    qDebug() << "Elapsed time: " << ++m_elapsedTime << " seconds";
 
-    // m_timelapse->stop();
     emit elapsedTimeChanged();
 }
