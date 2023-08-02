@@ -7,6 +7,10 @@ Window {
     visible: true
     title: "ToDoDemo"
 
+    ListModel {
+        id: myListModel
+    }
+
     Screen01 {
         id: mainScreen
 

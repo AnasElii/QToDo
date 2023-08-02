@@ -14,7 +14,7 @@
             "program": "${command:cmake.launchTargetPath}",
             "cwd": "${workspaceFolder}",
             "args": [],
-            "visualizerFile": "c:\\Users\\Aninoss\\AppData\\Roaming\\Code\\User\\workspaceStorage\\dfd19e581d21e2f6bfa6c36039b3d46b\\tonka3000.qtvsctools\\qt.natvis.xml"
+            "visualizerFile": "c:\\Users\\Aninoss\\AppData\\Roaming\\Code\\User\\workspaceStorage\\135daf2b065d19203deb8a6f9be0eaf8\\tonka3000.qtvsctools\\qt.natvis.xml"
         },
         {
             "type": "qml",

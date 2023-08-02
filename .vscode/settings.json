@@ -3,6 +3,8 @@
     "files.associations": {
         "qguiapplication": "cpp",
         "qelapsedtimer": "cpp",
-        "qqmlengine": "cpp"
+        "qqmlengine": "cpp",
+        "qdebug": "cpp",
+        "qqmlapplicationengine": "cpp"
     }
 }

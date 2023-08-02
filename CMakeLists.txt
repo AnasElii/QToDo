@@ -26,7 +26,6 @@ find_package(Qt6 COMPONENTS Gui Quick REQUIRED)
 # ========= Add executable
 qt_add_executable(${CMAKE_PROJECT_NAME}
     ${SOURCES}
-
 )
 
 # ========= Add qml medule
@@ -36,6 +35,7 @@ qt_add_qml_module(${CMAKE_PROJECT_NAME}
     QML_FILES
     interfaces/main.qml
     interfaces/Screen01.qml
+    interfaces/components/MyDoItem.qml
     components/MyButton.qml
     RESOURCES
     resources/icons/icons8_close_480px_2.png
