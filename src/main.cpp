@@ -4,6 +4,7 @@
 #include <QDebug>
 
 #include "aitemtimer.h"
+#include "display.h"
 
 int main(int argc, char *argv[])
 {
@@ -15,6 +16,10 @@ int main(int argc, char *argv[])
     // Registering the AItemTimer class
     AItemTimer aItemTimer;
     engine.rootContext()->setContextProperty("aItemTimer", &aItemTimer);
+
+    // Registring Display Class
+//    Display display;
+//    engine.rootContext()->setContextProperty("display", &display);
 
     const QUrl url(u"qrc:/mainLib/interfaces/main.qml"_qs);
     QObject::connect(
